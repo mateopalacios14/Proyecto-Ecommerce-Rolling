@@ -1,0 +1,8 @@
+.navbar {
+    background-color: aliceblue;
+}
+.imagen-tienda {
+    width: 50px;
+    max-height: 50px;
+    object-fit: contain;
+}
