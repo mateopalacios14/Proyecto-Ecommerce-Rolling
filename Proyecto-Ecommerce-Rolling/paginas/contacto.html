@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      padding: 25px;
+      background-color: #ffffff;
+      color: #333;
+    }
+    h2 {
+      color: #1e293b;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 10px;
+    }
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+    @media (max-width: 768px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+    }
+    .info-box {
+      background-color: #f8fafc;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #e2e8f0;
+    }
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+    .info-item i {
+      color: #2563eb;
+      font-size: 1.2rem;
+      width: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #475569;
+    }
+    .input-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .input-container i {
+      position: absolute;
+      left: 12px;
+      color: #94a3b8;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px 10px 10px 38px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      outline: none;
+    }
+    textarea {
+      padding-left: 12px;
+      resize: vertical;
+    }
+    input:focus, textarea:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+    button {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      width: 100%;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background-color: #1d4ed8;
+    }
+    .map-container {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    iframe.map {
+      width: 100%;
+      height: 320px;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Contáctanos</h2>
+
+  <div class="contact-container">
+    <!-- Columna Izquierda: Información y Formulario -->
+    <div>
+      <div class="info-box">
+        <div class="info-item">
+          <i class="fas fa-house"></i>
+          <span><strong>Domicilio:</strong> Av. Corrientes 1234, CABA, Argentina</span>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <span><strong>Teléfono:</strong> +54 11 4321-8765</span>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <span><strong>Email:</strong> Bookshop@gmail.com</span>
+        </div>
+      </div>
+
+      <form onsubmit="alert('¡Consulta enviada con éxito!'); return false;">
+        <div class="form-group">
+          <label for="nombre">Nombre Completo</label>
+          <div class="input-container">
+            <i class="fas fa-user"></i>
+            <input type="text" id="nombre" required placeholder="Ingrese su nombre">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo Electrónico</label>
+          <div class="input-container">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" required placeholder="ejemplo@correo.com">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">Consulta / Mensaje</label>
+          <textarea id="mensaje" rows="4" required placeholder="Escriba su consulta aquí..."></textarea>
+        </div>
+
+        <button type="submit"><i class="fas fa-paper-plane"></i> Enviar Consulta</button>
+      </form>
+    </div>
+
+    <!-- Columna Derecha: Mapa -->
+    <div>
+      <h3 style="margin-bottom: 15px; color: #334155;">Nuestra Ubicación</h3>
+      <div class="map-container">
+        <iframe class="map" src="https://maps.google.com/maps?q=-34.6037,-58.3816&z=15&output=embed" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
