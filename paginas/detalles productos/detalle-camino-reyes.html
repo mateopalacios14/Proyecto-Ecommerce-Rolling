@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookShop</title>
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg">
+
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="/Index.html">
+                    <img src="/assets/img/logo.png" class="imagen-tienda" alt="Libro">
+                </a>
+
+
+                <!-- boton de celular -->
+                <button class="navbar-toggler bg-body" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+
+
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="paginas/nosotros.html">
+                                Nosotros
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="paginas/contacto.html">
+                                Contacto
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+                    <form class="d-flex me-2" role="search">
+
+                        <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
+
+                        <button class="btn btn-outline-success " type="button"
+                            onclick="window.location.href='paginas/ERROR.html'">
+
+                            Buscar
+
+                        </button>
+
+                    </form>
+
+
+                    <a class="navbar-brand" href="paginas/carrito.html">
+                        <img src="/assets/img/carrito-logo.png" class="imagen-tienda" alt="Libro">
+                    </a>
+
+
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#loginModal">
+
+                        Login
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+
+            <div class="modal-dialog modal-dialog-centered">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+
+                        <h1 class="modal-title fs-5" id="loginModalLabel">
+                            Iniciar sesión
+                        </h1>
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar">
+                        </button>
+
+                    </div>
+
+
+                    <div class="modal-body">
+
+                        <form>
+
+                            <div class="mb-3">
+
+                                <label for="email" class="form-label">
+                                    Correo electrónico
+                                </label>
+
+                                <input type="email" class="form-control" id="email" placeholder="ejemplo@gmail.com">
+
+                            </div>
+
+
+                            <div class="mb-3">
+
+                                <label for="password" class="form-label">
+                                    Contraseña
+                                </label>
+
+                                <input type="password" class="form-control" id="password" placeholder="Contraseña">
+
+                            </div>
+
+
+                            <button type="submit" class="btn btn-primary w-100">
+
+                                Iniciar sesión
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+
+                    <div class="modal-footer">
+
+                        <span>
+                            ¿No tenés una cuenta?
+                        </span>
+
+                        <a href="paginas/register.html">
+                            Registrate
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+    <main class="detalle-producto container">
+
+        <!-- INFORMACIÓN DEL LIBRO -->
+        <section class="row g-4">
+
+            <!-- Imagen y datos -->
+            <div class="col-12 col-md-4">
+                <article class="card tarjeta-libro h-100">
+
+                    <div class="card-body">
+                        <h1 class="h3">El camino de los Reyes</h1>
+
+                        <img src="/assets/img/portadas/portada-camino.png" class="imagen-detalle"
+                            alt="Portada de El Imperio Final">
+
+                        <p><strong>Autor:</strong> Brandon Sanderson</p>
+                        <p><strong>Género:</strong> Fantasía</p>
+                        <p><strong>Editorial:</strong> Nova</p>
+                        <p><strong>Idioma:</strong> Español</p>
+                    </div>
+
+                </article>
+            </div>
+
+            <!-- Precio, sinopsis y carrito -->
+            <div class="col-12 col-md-8">
+                <article class="card tarjeta-informacion h-100">
+
+                    <div class="card-body d-flex flex-column">
+
+
+                        <h3 class="h4">Sinopsis</h3>
+
+                        <p>
+                           
+
+                            Anhelo los días previos a la Última Desolación. <br>
+
+                            Los días en que los Heraldos nos abandonaron y los Caballeros Radiantes se giraron en
+                            nuestra contra. Un tiempo en que aún había magia en el mundo y honor en el corazón de los
+                            hombres. <br>
+
+                            El mundo fue nuestro, pero lo perdimos. Probablemente no hay nada más estimulante para las
+                            almas de los hombres que la victoria. <br>
+
+                            ¿O tal vez fue la victoria una ilusión durante todo ese tiempo? ¿Comprendieron nuestros
+                            enemigos que cuanto más duramente luchaban, más resistíamos nosotros? Quizá vieron que el
+                            fuego y el martillo tan solo producían mejores espadas. Pero ignoraron el acero durante el
+                            tiempo suficiente para oxidarse. <br>
+                            Hay cuatro personas a las que observamos. La primera es el médico, quien dejó de curar para
+                            convertirse en soldado durante la guerra más brutal de nuestro tiempo. <br> La segunda es el
+                            asesino, un homicida que llora siempre que mata. La tercera es la mentirosa, una joven que
+                            viste un manto de erudita sobre un corazón de ladrona. Por último está el alto príncipe, un
+                            guerrero que mira al pasado mientras languidece su sed de guerra. <br>
+                        </p>
+                                                <h2 class="precio">$50.000</h2>
+
+                        <button type="button" class="btn btn-success boton-carrito mt-auto"
+                            onclick="window.location.href='carrito.html'">
+                            Agregar al carrito
+                        </button>
+
+                    </div>
+
+                </article>
+            </div>
+
+        </section>
+
+        <!-- COMENTARIOS -->
+        <section class="comentarios mt-4">
+
+            <h2 class="h3 mb-3">Caja de comentarios</h2>
+
+            <div class="row g-3">
+
+                <div class="col-12 col-md-4">
+                    <article class="card tarjeta-comentario h-100">
+                        <div class="card-body">
+                            <h3 class="h5">Sencillamente asombroso</h3>
+                            <p>Una historia atrapante y un mundo muy original.</p>
+                            <p class="text-secondary mb-0">— Ricardo Fort</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <article class="card tarjeta-comentario h-100">
+                        <div class="card-body">
+                            <h3 class="h5">Duerman a Shallan</h3>
+                            <p>Los capitulos de Shallan deben ser los mas aburridos de la historia de la Fantasia</p>
+                            <p class="text-secondary mb-0">— Lisa Simpson</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <article class="card tarjeta-comentario h-100">
+                        <div class="card-body">
+                            <h3 class="h5">La mejor obra jamas creada</h3>
+                            <p>Debe ser el mejor libro de fantasia que escribi... digo que lei, no hay mejor libro para leer que este. Deberian comprarlo dos o tres veces cada uno</p>
+                            <p class="text-secondary mb-0">— Brandon Sanderson</p>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+        <footer class="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-md-6 col-lg-4 footer-col">
+                    <img src="assets/img/logo.png" alt="Logo de Mi Librería" class="footer-logo">
+
+                    <p id="footer-text">
+                        Tu librería online para encontrar tus libros favoritos.
+                    </p>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 footer-col">
+                    <h3>Redes Sociales</h3>
+
+                    <ul class="footer-links">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="">X</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 footer-col">
+                    <h3>Información util</h3>
+
+                    <ul class="footer-links">
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Soporte</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
